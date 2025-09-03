@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1521.2118, g: 1372.0543, b: 1190.2745, a: 1}
+  m_IndirectSpecularColor: {r: 1577.3801, g: 1434.5426, b: 1266.8688, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9168,6 +9168,7 @@ GameObject:
   - component: {fileID: 2111554035}
   - component: {fileID: 2111554036}
   - component: {fileID: 2111554037}
+  - component: {fileID: 2111554038}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -9237,6 +9238,21 @@ MonoBehaviour:
   inicioFinalText: {fileID: 2013337605}
   deteccionUsuario: {fileID: 83996691}
   deteccionDistanciaUsuario: {fileID: 419088475}
+  nombrePrueba: Baloncesto
+--- !u!114 &2111554038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111554034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a630a39517e653045ba5b146e2ed268d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  validatorText: {fileID: 0}
 --- !u!1 &2124986269
 GameObject:
   m_ObjectHideFlags: 0
@@ -9401,7 +9417,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 71c164130ce03904490b2b1ec7f1cb40, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1cc532a63e946324fae45c153ed98eda, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

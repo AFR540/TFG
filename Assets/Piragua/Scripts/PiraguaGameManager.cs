@@ -11,8 +11,10 @@ public class PiraguaGameManager : MonoBehaviour
     [SerializeField] TMP_Text inicioFinalText;
     [SerializeField] GameObject deteccionUsuario;
     [SerializeField] GameObject deteccionDistanciaUsuario;
+    [SerializeField] string nombrePrueba = "Piragua";
 
     MostrarPuntuaciones mp;
+    private CambiarEscena cambiarEscena;
     private float tiempoRestante = 30f;
     private float distancia = 0f;
     private bool activeGame = false;
@@ -25,6 +27,7 @@ public class PiraguaGameManager : MonoBehaviour
         ActualizarDistanciaTexto();
         ActualizarTiempoTexto();
         mp = GetComponent<MostrarPuntuaciones>();
+        cambiarEscena = FindObjectOfType<CambiarEscena>();
         inicioFinalText.gameObject.SetActive(false);
         tiempo.gameObject.SetActive(false);
     }
@@ -49,10 +52,10 @@ public class PiraguaGameManager : MonoBehaviour
                 tiempoRestante = 0f;
                 activeGame = false;
                 AllRecords allRecords = AllRecords.Load();
-                allRecords.GuardarPuntuacion("Piragua", distancia.ToString() + " m");
+                allRecords.GuardarPuntuacion(nombrePrueba, distancia.ToString() + " m");
                 StartCoroutine(mp.MostrarRecords("Piragua", "m"));
 
-                StartCoroutine(CargarSiguienteEscena(15f));
+                StartCoroutine(cambiarEscena.CargarSiguienteEscena(10f));
             }
 
             ActualizarTiempoTexto();
@@ -69,14 +72,6 @@ public class PiraguaGameManager : MonoBehaviour
         int minutos = Mathf.FloorToInt(tiempoRestante / 60);
         int segundos = Mathf.FloorToInt(tiempoRestante % 60);
         tiempo.text = minutos.ToString("00") + ":" + segundos.ToString("00");
-    }
-
-    private IEnumerator CargarSiguienteEscena(float delay = 10f)
-    {
-        yield return new WaitForSeconds(delay);
-
-        int escenaActual = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(escenaActual + 1);
     }
 
     // Setter para la variable que indica si se han detectado las caderas

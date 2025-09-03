@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class VallaColiderDetector : MonoBehaviour
 {
-    private int contador; // Variable entera que se usará para lanzar únicamente la animación una vez
+    private bool colisionado = false; // Variable entera que se usará para lanzar únicamente la animación una vez
     private GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        contador = 0;
+        colisionado = false;
         gameManager = FindObjectOfType<GameManager>();
     }
 
@@ -24,9 +24,9 @@ public class VallaColiderDetector : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            if (contador > 0) return;
+            if (colisionado) return;
             gameManager.Penalizar();
-            contador++;
+            colisionado = true;
         }
     }
 }

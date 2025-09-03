@@ -92,13 +92,6 @@ public class BallController : MonoBehaviour
 
         rb.isKinematic = false;
 
-        // Añadir desviación aleatoria
-        Vector3 desviacion = new Vector3(
-            Random.Range(-desviacionMax, desviacionMax),
-            Random.Range(0, desviacionMax),
-            Random.Range(-desviacionMax, desviacionMax)
-        );
-
         Vector3 velocidadInicial = CalcularVelocidadParabolica(rb.position, ring.position, 2.1f);
 
         rb.velocity = velocidadInicial;
@@ -108,7 +101,6 @@ public class BallController : MonoBehaviour
     {
         float gravedad = Mathf.Abs(Physics.gravity.y);
 
-        float altura = destino.y - origen.y;
         Vector3 planarDestino = new Vector3(destino.x, 0, destino.z);
         Vector3 planarOrigen = new Vector3(origen.x, 0, origen.z);
         Vector3 planarDir = (planarDestino - planarOrigen);

@@ -13,9 +13,11 @@ public class BasketGameManager : MonoBehaviour
     [SerializeField] TMP_Text inicioFinalText;
     [SerializeField] GameObject deteccionUsuario;
     [SerializeField] GameObject deteccionDistanciaUsuario;
+    [SerializeField] string nombrePrueba = "Baloncesto";
 
     MostrarPuntuaciones mp;
-    private float tiempoRestante = 30f;
+    private CambiarEscena cambiarEscena;
+    private float tiempoRestante = 30f; 
     private float puntuacion = 0f;
     private bool activeGame = false;
     private bool userDetected = false;
@@ -27,6 +29,7 @@ public class BasketGameManager : MonoBehaviour
         ActualizarPuntuacionTexto();
         ActualizarTiempoTexto();
         mp = GetComponent<MostrarPuntuaciones>();
+        cambiarEscena = FindObjectOfType<CambiarEscena>();
         inicioFinalText.gameObject.SetActive(false);
         incrementoPuntuacionText.gameObject.SetActive(false);
     }
@@ -51,6 +54,7 @@ public class BasketGameManager : MonoBehaviour
                 tiempoRestante = 0f;
                 activeGame = false;
                 StartCoroutine(Esperar(1.5f));
+                StartCoroutine(cambiarEscena.CargarSiguienteEscena(10f));
             }
 
             ActualizarTiempoTexto();
@@ -63,7 +67,7 @@ public class BasketGameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(tiempo);
         AllRecords allRecords = AllRecords.Load();
-        allRecords.GuardarPuntuacion("Baloncesto", puntuacion.ToString() + " pts");
+        allRecords.GuardarPuntuacion(nombrePrueba, puntuacion.ToString() + " pts");
         StartCoroutine(mp.MostrarRecords("Baloncesto", "pts"));
 
         StartCoroutine(CargarSiguienteEscena(15f));

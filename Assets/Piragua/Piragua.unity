@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 792.62244, g: 880.3141, b: 1005.54114, a: 1}
+  m_IndirectSpecularColor: {r: 848.90735, g: 942.78723, b: 1082.1774, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1659,6 +1659,10 @@ PrefabInstance:
     - target: {fileID: 2213818079281758326, guid: f437673d58ef5a94e867359ddab5127c, type: 3}
       propertyPath: m_Name
       value: ResumenPuntuaciones
+      objectReference: {fileID: 0}
+    - target: {fileID: 2213818079281758326, guid: f437673d58ef5a94e867359ddab5127c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5993433865382561994, guid: f437673d58ef5a94e867359ddab5127c, type: 3}
       propertyPath: m_Pivot.x
@@ -3317,6 +3321,7 @@ GameObject:
   - component: {fileID: 1071021288}
   - component: {fileID: 1071021291}
   - component: {fileID: 1071021290}
+  - component: {fileID: 1071021292}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3402,6 +3407,21 @@ MonoBehaviour:
   inicioFinalText: {fileID: 956300595}
   deteccionUsuario: {fileID: 397006943}
   deteccionDistanciaUsuario: {fileID: 1836571395}
+  nombrePrueba: Piragua
+--- !u!114 &1071021292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071021287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a630a39517e653045ba5b146e2ed268d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  validatorText: {fileID: 0}
 --- !u!4 &1086533409 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: aae77c8b059956e498fc26b883b78a14, type: 3}

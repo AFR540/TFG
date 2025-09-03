@@ -35,12 +35,6 @@ public class AllRecords
         PlayerPrefs.SetString("CurrentPlayerId", id);
     }
 
-    /*public PlayerRecord GetCurrentPlayer()
-    {
-        string id = PlayerPrefs.GetString("CurrentPlayerId", null);
-        return id != null && recordsDict.ContainsKey(id) ? recordsDict[id] : null;
-    }*/
-
     public void GuardarPuntuacion(string nombrePrueba, string puntuacion)
     {
         string playerId = PlayerPrefs.GetString("CurrentPlayerId", null);
@@ -91,6 +85,17 @@ public class AllRecords
         }
     }
 
+    public string GetUltimoResultado(string nombrePrueba)
+    {
+        var entry = entries.LastOrDefault(e => e.record.scores.ContainsKey(nombrePrueba));
+        if (entry != null && entry.record.scores.TryGetValue(nombrePrueba, out string valorTexto))
+        {
+            return valorTexto;
+        }
+
+        return "";
+    }
+
     public List<(string playerName, string puntuacion)> GetTop5Scores(string nombrePrueba, string unidadPuntuacion)
     {
         List<(string playerName, float puntuacion)> resultadosTemporales = new();
@@ -101,6 +106,17 @@ public class AllRecords
             {
                 // Extrae el número antes del primer carácter no numérico (ej: "10.5 m")
                 string numero = new string(valorTexto.TakeWhile(c => char.IsDigit(c) || c == '.' || c == ',').ToArray());
+
+                if (float.TryParse(numero.Replace(',', '.'), System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out float valor))
+                {
+                    resultadosTemporales.Add((entry.record.playerName, valor));
+                }
+            }
+
+            if (entry.record.scores.TryGetValue(nombrePrueba + " 2", out string valorTexto2))
+            {
+                // Extrae el número antes del primer carácter no numérico (ej: "10.5 m")
+                string numero = new string(valorTexto2.TakeWhile(c => char.IsDigit(c) || c == '.' || c == ',').ToArray());
 
                 if (float.TryParse(numero.Replace(',', '.'), System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out float valor))
                 {

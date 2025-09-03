@@ -14,7 +14,10 @@ public class PlayerRecord
             { "Boxeo", "No Puntuado" },
             { "Baloncesto", "No Puntuado" },
             { "Piragua", "No Puntuado" },
-            { "Hípica", "No Puntuado" }
+            { "Atletismo 2", "No Puntuado" },
+            { "Boxeo 2", "No Puntuado" },
+            { "Baloncesto 2", "No Puntuado" },
+            { "Piragua 2", "No Puntuado" },
         };
     }
 }

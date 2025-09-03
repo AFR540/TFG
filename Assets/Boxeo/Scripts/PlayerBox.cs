@@ -116,6 +116,7 @@ public class PlayerBox : MonoBehaviour
         }
 
         UnityEngine.Vector3 boxerPos = boxEnemy.position;
+
         boxerPos.y = minFoot.y;
         boxerPos.z = minFoot.z;
         boxEnemy.position = boxerPos;

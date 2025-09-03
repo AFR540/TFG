@@ -12,8 +12,10 @@ public class BoxGameManager : MonoBehaviour
     [SerializeField] TMP_Text inicioFinalText;
     [SerializeField] GameObject deteccionUsuario;
     [SerializeField] GameObject deteccionDistanciaUsuario;
+    [SerializeField] string nombrePrueba = "Boxeo";
 
     MostrarPuntuaciones mp;
+    private CambiarEscena cambiarEscena;
     private float tiempoRestante = 30f;
     private int puntuacion = 5;
     private bool activeGame = false;
@@ -26,6 +28,7 @@ public class BoxGameManager : MonoBehaviour
         inicioFinalText.gameObject.SetActive(false);
         incrementoPuntos.gameObject.SetActive(false);
         mp = GetComponent<MostrarPuntuaciones>();
+        cambiarEscena = FindObjectOfType<CambiarEscena>();
     }
 
     // Update is called once per frame
@@ -47,9 +50,9 @@ public class BoxGameManager : MonoBehaviour
                 activeGame = false;
 
                 AllRecords allRecords = AllRecords.Load();
-                allRecords.GuardarPuntuacion("Boxeo", puntuacion.ToString() + " puntos");
+                allRecords.GuardarPuntuacion(nombrePrueba, puntuacion.ToString() + " puntos");
                 StartCoroutine(mp.MostrarRecords("Boxeo", " puntos"));
-                return;
+                StartCoroutine(cambiarEscena.CargarSiguienteEscena(10f));
             }
 
             ActualizarTiempoTexto();

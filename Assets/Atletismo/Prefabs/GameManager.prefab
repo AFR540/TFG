@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 6266339477740556325}
   - component: {fileID: 2170440291969876178}
   - component: {fileID: 8268899389220819035}
+  - component: {fileID: 8311625383467316541}
+  - component: {fileID: 3394803248941946296}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -47,6 +49,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distancia: {fileID: 0}
   tiempo: {fileID: 0}
+  penalizacionText: {fileID: 0}
+  inicioFinalText: {fileID: 0}
+  deteccionUsuario: {fileID: 0}
+  deteccionDistanciaUsuario: {fileID: 0}
+  nombrePrueba: Atletismo
 --- !u!114 &8268899389220819035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,6 +68,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraTransform: {fileID: 0}
   vallas: {fileID: 0}
-  minDifY: 0.1
-  aceleration: 3
+  jointPrefab: {fileID: 6754361809600073097, guid: 94709a58f2f5ef042964bf47e9f4ffd4, type: 3}
+  minDifY: 0.05
   speedMultiplier: 3
+  impulsoMinimo: 0
+  impulsoMaximo: 1
+  velocidadMaxima: 1
+--- !u!114 &8311625383467316541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5172219479015237537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9192de388b2665144bee9377f5c01b66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraDisplay: {fileID: 0}
+  canvas: {fileID: 0}
+  pos1: {fileID: 0}
+  pos2: {fileID: 0}
+  pos3: {fileID: 0}
+  pos4: {fileID: 0}
+  pos5: {fileID: 0}
+  nombre1: {fileID: 0}
+  nombre2: {fileID: 0}
+  nombre3: {fileID: 0}
+  nombre4: {fileID: 0}
+  nombre5: {fileID: 0}
+  puntuacion1: {fileID: 0}
+  puntuacion2: {fileID: 0}
+  puntuacion3: {fileID: 0}
+  puntuacion4: {fileID: 0}
+  puntuacion5: {fileID: 0}
+--- !u!114 &3394803248941946296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5172219479015237537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a630a39517e653045ba5b146e2ed268d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  validatorText: {fileID: 0}

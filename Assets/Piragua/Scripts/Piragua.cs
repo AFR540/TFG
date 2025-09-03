@@ -202,7 +202,5 @@ public class Piragua : MonoBehaviour
         {
             rbCameraTransform.velocity = rbCameraTransform.velocity.normalized * velocidadMaxima;
         }
-
-        //gameManager.IncrementarDistancia(rbCameraTransform.velocity.magnitude * Time.deltaTime);
     }
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 1521.2118, g: 1372.0543, b: 1190.2745, a: 1}
+  m_IndirectSpecularColor: {r: 1577.3801, g: 1434.5426, b: 1266.8688, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2876,7 +2876,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7bac835cba645c643a5e1765e5c3f030, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8a2d19608fbd8d14fa1ef1def038f489, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5631,83 +5631,82 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1650589956}
     - target: {fileID: 8268899389220819035, guid: 00925c4ff51c3104b8caf28a2d0f452f, type: 3}
-      propertyPath: minDifY
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 8268899389220819035, guid: 00925c4ff51c3104b8caf28a2d0f452f, type: 3}
-      propertyPath: aceleration
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8268899389220819035, guid: 00925c4ff51c3104b8caf28a2d0f452f, type: 3}
-      propertyPath: jointPrefab
-      value: 
-      objectReference: {fileID: 6754361809600073097, guid: 94709a58f2f5ef042964bf47e9f4ffd4, type: 3}
-    - target: {fileID: 8268899389220819035, guid: 00925c4ff51c3104b8caf28a2d0f452f, type: 3}
-      propertyPath: impulsoMaximo
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8268899389220819035, guid: 00925c4ff51c3104b8caf28a2d0f452f, type: 3}
-      propertyPath: impulsoMinimo
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8268899389220819035, guid: 00925c4ff51c3104b8caf28a2d0f452f, type: 3}
       propertyPath: cameraTransform
       value: 
       objectReference: {fileID: 556260266}
-    - target: {fileID: 8268899389220819035, guid: 00925c4ff51c3104b8caf28a2d0f452f, type: 3}
-      propertyPath: speedMultiplier
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8268899389220819035, guid: 00925c4ff51c3104b8caf28a2d0f452f, type: 3}
-      propertyPath: velocidadMaxima
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8268899389220819035, guid: 00925c4ff51c3104b8caf28a2d0f452f, type: 3}
-      propertyPath: rbCameraTransform
+    - target: {fileID: 8311625383467316541, guid: 00925c4ff51c3104b8caf28a2d0f452f, type: 3}
+      propertyPath: pos1
       value: 
-      objectReference: {fileID: 556260268}
+      objectReference: {fileID: 16419444}
+    - target: {fileID: 8311625383467316541, guid: 00925c4ff51c3104b8caf28a2d0f452f, type: 3}
+      propertyPath: pos2
+      value: 
+      objectReference: {fileID: 1451149083}
+    - target: {fileID: 8311625383467316541, guid: 00925c4ff51c3104b8caf28a2d0f452f, type: 3}
+      propertyPath: pos3
+      value: 
+      objectReference: {fileID: 1102998240}
+    - target: {fileID: 8311625383467316541, guid: 00925c4ff51c3104b8caf28a2d0f452f, type: 3}
+      propertyPath: pos4
+      value: 
+      objectReference: {fileID: 1564607035}
+    - target: {fileID: 8311625383467316541, guid: 00925c4ff51c3104b8caf28a2d0f452f, type: 3}
+      propertyPath: pos5
+      value: 
+      objectReference: {fileID: 238755123}
+    - target: {fileID: 8311625383467316541, guid: 00925c4ff51c3104b8caf28a2d0f452f, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1687168551}
+    - target: {fileID: 8311625383467316541, guid: 00925c4ff51c3104b8caf28a2d0f452f, type: 3}
+      propertyPath: nombre1
+      value: 
+      objectReference: {fileID: 474610797}
+    - target: {fileID: 8311625383467316541, guid: 00925c4ff51c3104b8caf28a2d0f452f, type: 3}
+      propertyPath: nombre2
+      value: 
+      objectReference: {fileID: 749338361}
+    - target: {fileID: 8311625383467316541, guid: 00925c4ff51c3104b8caf28a2d0f452f, type: 3}
+      propertyPath: nombre3
+      value: 
+      objectReference: {fileID: 1823740404}
+    - target: {fileID: 8311625383467316541, guid: 00925c4ff51c3104b8caf28a2d0f452f, type: 3}
+      propertyPath: nombre4
+      value: 
+      objectReference: {fileID: 84491594}
+    - target: {fileID: 8311625383467316541, guid: 00925c4ff51c3104b8caf28a2d0f452f, type: 3}
+      propertyPath: nombre5
+      value: 
+      objectReference: {fileID: 945769576}
+    - target: {fileID: 8311625383467316541, guid: 00925c4ff51c3104b8caf28a2d0f452f, type: 3}
+      propertyPath: puntuacion1
+      value: 
+      objectReference: {fileID: 1346264097}
+    - target: {fileID: 8311625383467316541, guid: 00925c4ff51c3104b8caf28a2d0f452f, type: 3}
+      propertyPath: puntuacion2
+      value: 
+      objectReference: {fileID: 1611037892}
+    - target: {fileID: 8311625383467316541, guid: 00925c4ff51c3104b8caf28a2d0f452f, type: 3}
+      propertyPath: puntuacion3
+      value: 
+      objectReference: {fileID: 776623139}
+    - target: {fileID: 8311625383467316541, guid: 00925c4ff51c3104b8caf28a2d0f452f, type: 3}
+      propertyPath: puntuacion4
+      value: 
+      objectReference: {fileID: 1624084074}
+    - target: {fileID: 8311625383467316541, guid: 00925c4ff51c3104b8caf28a2d0f452f, type: 3}
+      propertyPath: puntuacion5
+      value: 
+      objectReference: {fileID: 421939659}
+    - target: {fileID: 8311625383467316541, guid: 00925c4ff51c3104b8caf28a2d0f452f, type: 3}
+      propertyPath: cameraDisplay
+      value: 
+      objectReference: {fileID: 1538683303}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5172219479015237537, guid: 00925c4ff51c3104b8caf28a2d0f452f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5535748114063307259}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00925c4ff51c3104b8caf28a2d0f452f, type: 3}
---- !u!1 &5535748114063307258 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5172219479015237537, guid: 00925c4ff51c3104b8caf28a2d0f452f, type: 3}
-  m_PrefabInstance: {fileID: 5535748114063307257}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &5535748114063307259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5535748114063307258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9192de388b2665144bee9377f5c01b66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cameraDisplay: {fileID: 1538683303}
-  canvas: {fileID: 1687168551}
-  pos1: {fileID: 16419444}
-  pos2: {fileID: 1451149083}
-  pos3: {fileID: 1102998240}
-  pos4: {fileID: 1564607035}
-  pos5: {fileID: 238755123}
-  nombre1: {fileID: 474610797}
-  nombre2: {fileID: 749338361}
-  nombre3: {fileID: 1823740404}
-  nombre4: {fileID: 84491594}
-  nombre5: {fileID: 945769576}
-  puntuacion1: {fileID: 1346264097}
-  puntuacion2: {fileID: 1611037892}
-  puntuacion3: {fileID: 776623139}
-  puntuacion4: {fileID: 1624084074}
-  puntuacion5: {fileID: 421939659}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
