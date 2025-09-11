@@ -1131,7 +1131,7 @@ PrefabInstance:
         y pasa las manos por encima de la cabeza para lanzar.
 
 
-        CAda canasta
+        Cada canasta
         suma 3 puntos'
       objectReference: {fileID: 0}
     - target: {fileID: 5395027536142361125, guid: 948677e00e0b76e4a97ab698b89e2a24, type: 3}

@@ -1140,6 +1140,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3519597640004456993, guid: 948677e00e0b76e4a97ab698b89e2a24, type: 3}
+      propertyPath: m_text
+      value: 'Agachate para recoger los balones del suelo. Cuando cojas uno, levantate
+        y pasa las manos por encima de la cabeza para lanzar.
+
+
+        Cada canasta
+        suma 3 puntos'
+      objectReference: {fileID: 0}
     - target: {fileID: 6398939067126354031, guid: 948677e00e0b76e4a97ab698b89e2a24, type: 3}
       propertyPath: m_Camera
       value: 

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 262.33694, g: 325.04984, b: 430.2193, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -841,10 +841,10 @@ RectTransform:
   - {fileID: 1527799471}
   m_Father: {fileID: 2052967490}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -89.429985}
-  m_SizeDelta: {x: 0, y: -178.86005}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -89.42999}
+  m_SizeDelta: {x: 1024, y: 397.13995}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1309543923
 MonoBehaviour:
@@ -970,14 +970,14 @@ MonoBehaviour:
       - m_Target: {fileID: 1854543572}
         m_TargetAssemblyTypeName: CambiarEscena, Assembly-CSharp
         m_MethodName: validarNombre
-        m_Mode: 6
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Atletismo
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1854543572}
         m_TargetAssemblyTypeName: CambiarEscena, Assembly-CSharp

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -10,7 +11,8 @@ public class CambiarEscena : MonoBehaviour
     [SerializeField] TMP_InputField player;
     [SerializeField] GameObject validatorText;
 
-    private bool nombreValido = true; 
+    private bool nombreValido = true;
+    private bool checkNombre = false;
 
     public void Start()
     {
@@ -18,26 +20,30 @@ public class CambiarEscena : MonoBehaviour
     }
     public void CargarEscena(string escena)
     {
-        if (nombreValido)
+        if (checkNombre)
         {
-            AllRecords all = AllRecords.Load();
-            all.AddNewPlayer(player.text);
+            if (nombreValido)
+            {
+                AllRecords all = AllRecords.Load();
+                all.AddNewPlayer(player.text);
+                SceneManager.LoadScene(escena);
+            }
+        } else
+        {
             SceneManager.LoadScene(escena);
         }
     }
 
-    public void validarNombre(bool origenEscenaInicial = false)
+    public void validarNombre()
     {
-        if (origenEscenaInicial)
+        checkNombre = true;
+        if (player.text.Length < 3)
         {
-            if (player.text.Length < 3)
-            {
-                validatorText.SetActive(true);
-                nombreValido = false;
-            } else
-            {
-                nombreValido = true;
-            }
+            validatorText.SetActive(true);
+            nombreValido = false;
+        } else
+        {
+            nombreValido = true;
         }
     }
 

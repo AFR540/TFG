@@ -131,42 +131,35 @@ public class BodyMovementDetection : MonoBehaviour
         return false;
     }
 
-    private void AdjustCameraYPosition(nuitrack.Joint leftAnkleJoint, nuitrack.Joint rightAnkleJoint)
+    private void AdjustCameraYPosition(nuitrack.Joint leftJoint, nuitrack.Joint rightJoint)
     {
         if (!cameraPositioned)
         {
             gameManager.setUserDetected(false);
             gameManager.setUserCorrectDistance(false);
         }
-        if (leftAnkleJoint.Confidence < 0.5f || rightAnkleJoint.Confidence < 0.5f) return;
+        if (leftJoint.Confidence < 0.5f || rightJoint.Confidence < 0.5f) return;
 
         if (!cameraPositioned)
         {
             gameManager.setUserDetected(true);
         }
 
-        UnityEngine.Vector3 leftAnkle = ToVector3(leftAnkleJoint.Real);
-        UnityEngine.Vector3 rightAnkle = ToVector3(rightAnkleJoint.Real);
+        UnityEngine.Vector3 leftPos = ToVector3(leftJoint.Real);
+        UnityEngine.Vector3 rightPos = ToVector3(rightJoint.Real);
 
-        UnityEngine.Vector3 leftAnkleLocal = Camera.main.transform.InverseTransformPoint(leftAnkle);
-        UnityEngine.Vector3 rightAnkleLocal = Camera.main.transform.InverseTransformPoint(rightAnkle);
+        UnityEngine.Vector3 leftLocal = Camera.main.transform.InverseTransformPoint(leftPos);
+        UnityEngine.Vector3 rightLocal = Camera.main.transform.InverseTransformPoint(rightPos);
 
-        if (leftAnkleLocal.z < 2f || rightAnkleLocal.z < 2f) return;
+        if (leftLocal.z < 2f || rightLocal.z < 2f) return;
 
         if (!cameraPositioned)
         {
             gameManager.setUserCorrectDistance(true);
         }
 
-        float minFootY = Mathf.Min(leftAnkle.y, rightAnkle.y);
-        UnityEngine.Vector3 camPos = cameraTransform.position;
-        camPos.y -= minFootY - 0.4f;
-        cameraTransform.position = camPos;
-
-        UnityEngine.Vector3 vallasGroup = vallas.position;
-        vallasGroup.z = leftAnkle.z;
-        vallasGroup.x = leftAnkle.x;
-        vallas.position = vallasGroup;
+        UnityEngine.Vector3 minPos = leftPos.y < rightPos.y ? leftPos : rightPos;
+        vallas.position = new UnityEngine.Vector3(minPos.x, minPos.y - 0.4f, minPos.z);
 
         gameManager.setActiveGame(true);
         cameraPositioned = true;
