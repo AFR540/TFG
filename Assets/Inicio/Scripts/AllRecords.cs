@@ -75,6 +75,14 @@ public class AllRecords
         if (File.Exists(path))
         {
             string json = File.ReadAllText(path);
+
+            if (string.IsNullOrWhiteSpace(json))
+            {
+                File.Delete(path);
+
+                return new AllRecords();
+            }
+
             AllRecords data = JsonConvert.DeserializeObject<AllRecords>(json);
             data.RebuildDictionary();
             return data;
